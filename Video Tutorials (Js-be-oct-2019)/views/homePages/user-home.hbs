@@ -1,0 +1,44 @@
+<head>
+    <title>Welcome</title>
+</head>
+
+        <main>
+            <h1 class="text-center">Courses</h1>
+            <section>
+                <a href="/course/create" class="btn btn-warning ml-5 ">Create Course</a>
+                <form class="search float-right mr-5">
+                    <label>Search: </label>
+                    <input type="text">
+                    <input type="submit" class="btn btn-info" value="Search">
+                </form>
+            </section>
+
+            <div class="container mt-3">
+                <div class="row ">
+                    <div class="card-deck d-flex justify-content-center">
+                      
+                    <div class="row d-flex justify-content-center">
+                        <div class="card-deck">
+                        {{#each courses}}
+                           <div class="card mb-4">
+                            <img class="card-img-top"
+                                src="{{imageUrl}}"
+                                alt="Card image cap" width="400">
+                            <div class="card-body">
+                                <h4 class="card-title">{{title}}</h4>
+                            </div>
+                            <div class="card-footer">
+                                <a href="/course/details/{{_id}}"><button type="button" class="btn btn-info">Details</button></a>
+                                <small class="float-right">{{createdAt}}</small>
+                            </div>
+                        </div>
+                         {{else}}
+                <h4 class="text-center">Nho courses...</h4>
+            {{/each}}
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+           
+        </main>
