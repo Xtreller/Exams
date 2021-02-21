@@ -1,0 +1,27 @@
+
+    <main>
+         {{#each messages}}
+        <section class="notifications">
+           <p class="notification-message">{{this}}</p>
+        </section>
+        {{/each}}
+        <form action="/register" method="POST">
+            <h1>Register</h1>
+
+            <p>Personal info</p>
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="JustMyself123..." name="username">
+
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="******" name="password">
+
+            <label for="repeat-password">Repeat Password</label>
+            <input id="repeat-password" type="password" placeholder="******" name="repeatPassword">
+            <hr>
+            <p>Account</p>
+            <label for="amount">Amount</label>
+            <input id="amount" type="text" placeholder="$00.00" name="amount">
+
+            <button type="submit">Register</button>
+        </form>
+    </main>
